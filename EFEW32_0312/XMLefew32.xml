@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<efew32_Vendeglatas>
+    
+    <etterem ekod="E_01">
+        <nev>Pataki Ízek Étterem</nev>
+        <csillag>4</csillag>
+        <cim>
+            <varos>Sárospatak</varos>
+            <utca>Rákóczi út</utca>
+            <hazszam>12</hazszam>
+        </cim>
+
+        <foszakacs fkod="F_101">
+            <nev>Kovács István</nev>
+            <eletkor>52</eletkor>
+            <vegzettseg>Mesterlevél</vegzettseg>
+            <vegzettseg>Szakács szakoktató</vegzettseg>
+        </foszakacs>
+
+        <szakacs szkod="SZ_201">
+            <nev>Nagy Lajos</nev>
+            <reszleg>Hidegkonyha</reszleg>
+            <vegzettseg>Szakács technikus</vegzettseg>
+        </szakacs>
+        <szakacs szkod="SZ_202">
+            <nev>Tóth Gábor</nev>
+            <reszleg>Grill részleg</reszleg>
+            <vegzettseg>Cukrász-Szakács</vegzettseg>
+        </szakacs>
+
+        <gyakornok gykod="GY_301">
+            <nev>Varga Bence</nev>
+            <gyakorlat>
+                <kezdete>2026-02-01</kezdete>
+                <idotartama>3 hónap</idotartama>
+            </gyakorlat>
+            <muszak>Délelőtt</muszak>
+            <muszak>Hétvége</muszak>
+        </gyakornok>
+    </etterem>
+
+    <vendeg vkod="V_501">
+        <nev>Minta Adél</nev>
+        <eletkor>28</eletkor>
+        <cim>
+            <varos>Szerencs</varos>
+            <utca>Petőfi tér</utca>
+            <hazszam>5</hazszam>
+        </cim>
+    </vendeg>
+
+    <rendeles>
+        <etterem_ref>E_01</etterem_ref>
+        <vendeg_ref>V_501</vendeg_ref>
+        <osszeg>12500</osszeg>
+        <etel>Szarvaspörkölt dödöllével</etel>
+    </rendeles>
+
+</efew32_Vendeglatas>
