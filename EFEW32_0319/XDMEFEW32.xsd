@@ -66,6 +66,10 @@
     </xs:keyref>
 
 
+    <xs:unique name="unique_foszakacs">
+        <xs:selector xpath="foszakacs"/>
+        <xs:field xpath="@e_f"/>
+    </xs:unique>
 
 
 </xs:element>

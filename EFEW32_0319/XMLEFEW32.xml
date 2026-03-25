@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<drppxl_Vendeglatas>
+    
+    <etterem ekod="E_01">
+        <nev>Újhelyi Csárda</nev>
+        <csillag>3</csillag>
+        <cim>
+            <varos>Sátoraljaújhely</varos>
+            <utca>Dózsa György utca</utca>
+            <hazszam>2</hazszam>
+        </cim>
+
+        <foszakacs fkod="F_101">
+            <nev>Takács Mihály</nev>
+            <eletkor>44</eletkor>
+            <vegzettseg>Főszakács</vegzettseg>
+            <vegzettseg>Szakácsképző</vegzettseg>
+        </foszakacs>
+
+        <szakacs szkod="SZ_201">
+            <nev>Kis Bertalan</nev>
+            <reszleg>Hidegkonyha</reszleg>
+            <vegzettseg>Vezető-szakács</vegzettseg>
+        </szakacs>
+        <szakacs gykod="SZ_202">
+            <nev>Tóth Pista</nev>
+            <reszleg>BBQ részleg</reszleg>
+            <vegzettseg>Gyakornok</vegzettseg>
+        </szakacs>
+
+        <gyakornok gykod="GY_301">
+            <nev>Varga Gyula</nev>
+            <gyakorlat>
+                <kezdete>2026-01-17</kezdete>
+                <idotartama>7 hónap</idotartama>
+            </gyakorlat>
+            <muszak>Nappali</muszak>
+            <muszak>Hétköznap</muszak>
+        </gyakornok>
+    </etterem>
+
+    <vendeg vkod="V_501">
+        <nev>Kinizsi Pál</nev>
+        <eletkor>77</eletkor>
+        <cim>
+            <varos>Budapest</varos>
+            <utca>Orczy Tér</utca>
+            <hazszam>11</hazszam>
+        </cim>
+    </vendeg>
+
+    <rendeles>
+        <etterem_ref>E_01</etterem_ref>
+        <vendeg_ref>V_501</vendeg_ref>
+        <osszeg>6900</osszeg>
+        <etel>Gyros tál sajttal</etel>
+    </rendeles>
+
+</drppxl_Vendeglatas>
