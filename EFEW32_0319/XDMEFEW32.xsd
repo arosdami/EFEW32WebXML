@@ -77,6 +77,57 @@
 
 
 
+<!-- Komplex Típusok-->
+  <xs:complexType name="etteremTipus">
+    <xs:sequence>
+      <xs:element name="nev" type="xs:string"/>
+      <xs:element name="cim" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="ekod" type="xs:string" use="required"/>
+  </xs:complexType>
 
+  <xs:complexType name="foszakacsTipus">
+    <xs:sequence>
+      <xs:element name="nev" type="xs:string"/>
+      <xs:element name="szakmacska" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="fkod" type="xs:string" use="required"/>
+    <xs:attribute name="e_f" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="szakacsTipus">
+    <xs:sequence>
+      <xs:element name="nev" type="xs:string"/>
+      <xs:element name="szakmacska" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="szkod" type="xs:string" use="required"/>
+    <xs:attribute name="e_sz" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="gyakornokTipus">
+    <xs:sequence>
+      <xs:element name="nev" type="xs:string"/>
+      <xs:element name="szakmacska" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="gykod" type="xs:string" use="required"/>
+    <xs:attribute name="e_gy" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="vendegTipus">
+    <xs:sequence>
+      <xs:element name="nev" type="xs:string"/>
+      <xs:element name="cim" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="vkod" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="rendelesTipus">
+    <xs:sequence>
+      <xs:element name="termek" type="xs:string"/>
+      <xs:element name="mennyiseg" type="xs:int"/>
+    </xs:sequence>
+    <xs:attribute name="e_v_e" type="xs:string" use="required"/>
+    <xs:attribute name="e_v_v" type="xs:string" use="required"/>
+  </xs:complexType>
 
 </xs:schema>
