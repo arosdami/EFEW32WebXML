@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<efew32_Vendeglatas>
+<vendeglatas xmlns:xsi="zhttp://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XDMEFEW32.xsd">
+    xsi:noNamespaceSchemaLocation="XDMEFEW32.xsd"
+   
+    <efew32_Vendeglatas>
+
+
     
     <etterem ekod="E_01">
         <nev>Pataki Ízek Étterem</nev>
