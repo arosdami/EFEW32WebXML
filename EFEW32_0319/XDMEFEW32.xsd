@@ -78,6 +78,7 @@
 
 
 <!-- Komplex Típusok-->
+
   <xs:complexType name="etteremTipus">
     <xs:sequence>
       <xs:element name="nev" type="xs:string"/>
@@ -89,7 +90,8 @@
   <xs:complexType name="foszakacsTipus">
     <xs:sequence>
       <xs:element name="nev" type="xs:string"/>
-      <xs:element name="szakmacska" type="xs:string"/>
+      <xs:element name="reszleg" type="xs:string"/>
+      <xs:element name="vegzettseg" type="xs:string" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute name="fkod" type="xs:string" use="required"/>
     <xs:attribute name="e_f" type="xs:string" use="required"/>
@@ -98,7 +100,7 @@
   <xs:complexType name="szakacsTipus">
     <xs:sequence>
       <xs:element name="nev" type="xs:string"/>
-      <xs:element name="szakmacska" type="xs:string"/>
+      <xs:element name="vegzettseg" type="xs:string"/>
     </xs:sequence>
     <xs:attribute name="szkod" type="xs:string" use="required"/>
     <xs:attribute name="e_sz" type="xs:string" use="required"/>
@@ -107,7 +109,8 @@
   <xs:complexType name="gyakornokTipus">
     <xs:sequence>
       <xs:element name="nev" type="xs:string"/>
-      <xs:element name="szakmacska" type="xs:string"/>
+      <xs:element name="gyakorlat" type="xs:string"/>
+      <xs:element name="muszak" type="xs:string"/>
     </xs:sequence>
     <xs:attribute name="gykod" type="xs:string" use="required"/>
     <xs:attribute name="e_gy" type="xs:string" use="required"/>
@@ -116,6 +119,7 @@
   <xs:complexType name="vendegTipus">
     <xs:sequence>
       <xs:element name="nev" type="xs:string"/>
+      <xs:element name="eletkor" type="xs:integer"/>
       <xs:element name="cim" type="xs:string"/>
     </xs:sequence>
     <xs:attribute name="vkod" type="xs:string" use="required"/>
@@ -123,8 +127,8 @@
 
   <xs:complexType name="rendelesTipus">
     <xs:sequence>
-      <xs:element name="termek" type="xs:string"/>
-      <xs:element name="mennyiseg" type="xs:int"/>
+      <xs:element name="osszeg" type="xs:string"/>
+      <xs:element name="etel" type="xs:string"/>
     </xs:sequence>
     <xs:attribute name="e_v_e" type="xs:string" use="required"/>
     <xs:attribute name="e_v_v" type="xs:string" use="required"/>
