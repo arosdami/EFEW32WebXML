@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Órarend | Táblázatos nézet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f6f8fa;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            padding: 2rem;
+            color: #1a2c38;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Fejléc - minimalista, emoji nélkül */
+        .header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .header h1 {
+            font-size: 1.6rem;
+            font-weight: 500;
+            letter-spacing: -0.2px;
+            color: #1f4e64;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-info {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            color: #647b8a;
+            font-size: 0.85rem;
+        }
+
+        .badge {
+            background: #eef2f6;
+            padding: 0.2rem 0.8rem;
+            border-radius: 16px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #3c6e86;
+        }
+
+        /* Táblázat wrapper - letisztult */
+        .schedule-table-wrapper {
+            overflow-x: auto;
+            border-radius: 16px;
+            background: white;
+            border: 1px solid #eef2f6;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            min-width: 800px;
+        }
+
+        /* Fejléc stílus */
+        .schedule-table thead tr {
+            background: #fbfdfe;
+            border-bottom: 1px solid #e9edf2;
+        }
+
+        .schedule-table th {
+            text-align: left;
+            padding: 1rem 1.2rem;
+            font-weight: 600;
+            color: #2c5a6e;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            border-bottom: 1px solid #e6ecf2;
+        }
+
+        /* Táblázat cellák */
+        .schedule-table td {
+            padding: 1rem 1.2rem;
+            border-bottom: 1px solid #f0f3f8;
+            vertical-align: middle;
+            color: #2c4453;
+        }
+
+        .schedule-table tbody tr:hover {
+            background: #fafcfe;
+            transition: background 0.2s ease;
+        }
+
+        /* Típus jelzők - emoji nélkül, csak szöveg */
+        .type-badge {
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.2px;
+        }
+
+        .type-eloadas {
+            background: #eef3f9;
+            color: #1f6b8c;
+        }
+
+        .type-gyakorlat {
+            background: #edf3ec;
+            color: #497c5a;
+        }
+
+        /* Helyszín címkék - emoji nélkül */
+        .location-badge {
+            display: inline-block;
+            padding: 0.2rem 0.7rem;
+            border-radius: 16px;
+            font-size: 0.75rem;
+            background: #f1f5f9;
+            color: #487a92;
+        }
+
+        .location-online {
+            background: #eef3f7;
+            color: #2c6e8a;
+        }
+
+        .location-tbd {
+            background: #fef5ea;
+            color: #a6622a;
+        }
+
+        /* Nap oszlop */
+        .day-cell {
+            font-weight: 500;
+            color: #2c5a6e;
+        }
+
+        /* Időpont */
+        .time-cell {
+            font-family: 'JetBrains Mono', monospace, 'SF Mono', system-ui;
+            font-size: 0.78rem;
+            font-weight: 450;
+            color: #567e94;
+        }
+
+        /* Oktató név */
+        .lecturer-name {
+            font-weight: 450;
+            color: #3d6a80;
+        }
+
+        /* Kurzus név */
+        .course-name {
+            font-weight: 550;
+            color: #1c465a;
+        }
+
+        /* Reszponzív */
+        @media (max-width: 900px) {
+            body {
+                padding: 1rem;
+            }
+            .schedule-table th,
+            .schedule-table td {
+                padding: 0.8rem 0.8rem;
+            }
+            .header h1 {
+                font-size: 1.4rem;
+            }
+        }
+
+        .footer-note {
+            margin-top: 1.2rem;
+            text-align: right;
+            font-size: 0.7rem;
+            color: #8da3b0;
+            border-top: 1px solid #eef2f6;
+            padding-top: 1rem;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: #94abba;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Órarend · táblázatos nézet</h1>
+        <div class="header-info">
+            <span>Programtervező Informatikus szak</span>
+            <span class="badge">2025/2026 · tavaszi félév</span>
+            <span class="badge">8 tantárgy</span>
+        </div>
+    </div>
+
+    <div class="schedule-table-wrapper">
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Nap</th>
+                    <th>Időpont</th>
+                    <th>Kurzus</th>
+                    <th>Típus</th>
+                    <th>Helyszín</th>
+                    <th>Oktató</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <tr><td colspan="6" class="empty-state">Adatok betöltése...</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="footer-note">
+        heti rendszerességű órák
+    </div>
+</div>
+
+<script>
+    // XML adatok - eredeti forrás alapján
+    const xmlString = `<?xml version="1.0" encoding="UTF-8"?>
+<efew32_orarend>
+    <ora id="1" tipus="eloadas">
+        <kurzus>Számításelmélet</kurzus>
+        <idopont>
+            <nap>hétfő</nap>
+            <tol>9:00</tol>
+            <ig>12:05</ig>
+        </idopont>
+        <helyszin>Online</helyszin>
+        <oktato>Dr. Veres Laura</oktato>
+        <szak>Programtervező Informatikus</szak>
+    </ora>
+    <ora id="2" tipus="gyakorlat">
+        <kurzus>Komputergrafika és képfeldolgozás</kurzus>
+        <idopont>
+            <nap>kedd</nap>
+            <tol>12:10</tol>
+            <ig>13:45</ig>
+        </idopont>
+        <helyszin>Online</helyszin>
+        <oktato>Mileff Péter</oktato>
+        <szak>Programtervező Informatikus</szak>
+    </ora>
+    <ora id="3" tipus="gyakorlat">
+        <kurzus>Alkalmazások fejlesztése projekt labor II.</kurzus>
+        <idopont>
+            <nap>kedd</nap>
+            <tol>16:00</tol>
+            <ig>19:10</ig>
+        </idopont>
+        <helyszin>Online</helyszin>
+        <oktato>Dr. Godo Zoltan</oktato>
+        <szak>Programtervező Informatikus</szak>
+    </ora>
+    <ora id="4" tipus="eloadas">
+        <kurzus>Valószínűségszámítás és statisztika</kurzus>
+        <idopont>
+            <nap>szerda</nap>
+            <tol>8:00</tol>
+            <ig>11:15</ig>
+        </idopont>
+        <helyszin>111. Terem</helyszin>
+        <oktato>Kucsinka Katalin</oktato>
+        <szak>Programtervező Informatikus</szak>
+    </ora>
+    <ora id="5" tipus="eloadas">
+        <kurzus>Oktatás és gamifikáció, videojáték-tanulmányok</kurzus>
+        <idopont>
+            <nap>szerda</nap>
+            <tol>12:00</tol>
+            <ig>14:35</ig>
+        </idopont>
+        <helyszin>132. Terem</helyszin>
+        <oktato>Perlaki Attila</oktato>
+        <szak>Programtervező Informatikus</szak>
+    </ora>
+    <ora id="6" tipus="eloadas">
+        <kurzus>Fordítóprogramok</kurzus>
+        <idopont>
+            <nap>szerda</nap>
+            <tol>17:35</tol>
+            <ig>19:10</ig>
+        </idopont>
+        <helyszin>Online</helyszin>
+        <oktato>TÚri József</oktato>
+        <szak>Programtervező Informatikus</szak>
+    </ora>
+    <ora id="7" tipus="eloadas">
+        <kurzus>Hálózati architektúrák és protokollok</kurzus>
+        <idopont>
+            <nap>csütörtök</nap>
+            <tol>9:00</tol>
+            <ig>10:25</ig>
+        </idopont>
+        <helyszin>Online</helyszin>
+        <oktato>Dr. Mileff Péter</oktato>
+        <szak>Programtervező Informatikus</szak>
+    </ora>
+    <ora id="8" tipus="gyakorlat">
+        <kurzus>Webkönyvtárak</kurzus>
+        <idopont>
+            <nap>csütörtök</nap>
+            <tol>11:30</tol>
+            <ig>12:55</ig>
+        </idopont>
+        <helyszin>TBD</helyszin>
+        <oktato>Dr. Bednarik László</oktato>
+        <szak>Programtervező Informatikus</szak>
+    </ora>
+</efew32_orarend>`;
+
+    // HTML escape függvény
+    function escapeHtml(str) {
+        if (!str) return "";
+        return str
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    }
+
+    // Típus formázása (emoji nélkül)
+    function getTypeHtml(tipus) {
+        const typeClass = tipus === "eloadas" ? "type-eloadas" : "type-gyakorlat";
+        const typeText = tipus === "eloadas" ? "Előadás" : "Gyakorlat";
+        return `<span class="type-badge ${typeClass}">${typeText}</span>`;
+    }
+
+    // Helyszín formázása (emoji nélkül)
+    function getLocationHtml(helyszin) {
+        let locationText = escapeHtml(helyszin);
+        let locationClass = "location-badge";
+        
+        if (helyszin.toLowerCase() === "online") {
+            locationClass += " location-online";
+        } else if (helyszin.toLowerCase() === "tbd") {
+            locationClass += " location-tbd";
+        }
+        
+        return `<span class="${locationClass}">${locationText}</span>`;
+    }
+
+    // Táblázat renderelése
+    function renderTimetable() {
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlString, "application/xml");
+        
+        const parseError = xmlDoc.querySelector("parsererror");
+        if (parseError) {
+            document.getElementById("table-body").innerHTML = `<tr><td colspan="6" class="empty-state">Hiba történt az órarend betöltésekor</td></tr>`;
+            return;
+        }
+        
+        const root = xmlDoc.querySelector("efew32_orarend");
+        if (!root) {
+            document.getElementById("table-body").innerHTML = `<tr><td colspan="6" class="empty-state">Nem található órarendi adat</td></tr>`;
+            return;
+        }
+        
+        const orak = root.querySelectorAll("ora");
+        if (orak.length === 0) {
+            document.getElementById("table-body").innerHTML = `<tr><td colspan="6" class="empty-state">Nincs egyetlen óra sem a listában</td></tr>`;
+            return;
+        }
+        
+        let rowsHtml = "";
+        
+        orak.forEach(ora => {
+            const tipus = ora.getAttribute("tipus") || "eloadas";
+            
+            const kurzusElem = ora.querySelector("kurzus");
+            const kurzusNev = kurzusElem ? kurzusElem.textContent : "Névtelen kurzus";
+            
+            const idopontElem = ora.querySelector("idopont");
+            let nap = "", tol = "", ig = "";
+            if (idopontElem) {
+                const napElem = idopontElem.querySelector("nap");
+                const tolElem = idopontElem.querySelector("tol");
+                const igElem = idopontElem.querySelector("ig");
+                nap = napElem ? napElem.textContent : "Ismeretlen";
+                tol = tolElem ? tolElem.textContent : "--:--";
+                ig = igElem ? igElem.textContent : "--:--";
+            }
+            
+            const helyszinElem = ora.querySelector("helyszin");
+            const helyszin = helyszinElem ? helyszinElem.textContent : "Nincs megadva";
+            
+            const oktatoElem = ora.querySelector("oktato");
+            const oktato = oktatoElem ? oktatoElem.textContent : "Ismeretlen oktató";
+            
+            const napFormatted = nap.charAt(0).toUpperCase() + nap.slice(1);
+            const timeRange = `${tol} – ${ig}`;
+            
+            rowsHtml += `
+                <tr>
+                    <td class="day-cell">${escapeHtml(napFormatted)}</td>
+                    <td class="time-cell">${escapeHtml(timeRange)}</td>
+                    <td class="course-name">${escapeHtml(kurzusNev)}</td>
+                    <td>${getTypeHtml(tipus)}</td>
+                    <td>${getLocationHtml(helyszin)}</td>
+                    <td class="lecturer-name">${escapeHtml(oktato)}</td>
+                </tr>
+            `;
+        });
+        
+        document.getElementById("table-body").innerHTML = rowsHtml;
+    }
+    
+    renderTimetable();
+</script>
+</body>
+</html>

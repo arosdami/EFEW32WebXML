@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<efew32_orarend> 
+    <ora id="1" tipus="eloadas"> 
+        <kurzus>Számításelmélet</kurzus> 
+        <idopont> 
+            <nap>hétfő</nap> 
+            <tol>9:00</tol> 
+            <ig>12:05</ig> 
+        </idopont>
+        <helyszin>Online</helyszin> 
+        <oktato>Dr. Veres Laura</oktato> 
+        <szak>Programtervező Informatikus</szak> </ora>
+
+    <ora id="2" tipus="gyakorlat">
+        <kurzus>Komputergrafika és képfeldolgozás</kurzus>
+        <idopont>
+            <nap>kedd</nap>
+            <tol>12:10</tol>
+            <ig>13:45</ig>
+        </idopont>
+        <helyszin>Online</helyszin>
+        <oktato>Mileff Péter</oktato>
+        <szak>Programtervező Informatikus</szak>
+    </ora>
+
+    <ora id="3" tipus="gyakorlat">
+        <kurzus>Alkalmazások fejlesztése projekt labor II.</kurzus>
+        <idopont>
+            <nap>kedd</nap>
+            <tol>16:00</tol>
+            <ig>19:10</ig>
+        </idopont>
+        <helyszin>Online</helyszin>
+        <oktato>Dr. Godo Zoltan</oktato>
+        <szak>Programtervező Informatikus</szak>
+    </ora>
+
+    <ora id="4" tipus="eloadas">
+        <kurzus>Valószínűségszámítás és statisztika</kurzus>
+        <idopont>
+            <nap>szerda</nap>
+            <tol>8:00</tol>
+            <ig>11:15</ig>
+        </idopont>
+        <helyszin>111. Terem</helyszin>
+        <oktato>Kucsinka Katalin</oktato>
+        <szak>Programtervező Informatikus</szak>
+    </ora>
+
+    <ora id="5" tipus="eloadas">
+        <kurzus>Oktatás és gamifikáció, videojáték-tanulmányok</kurzus>
+        <idopont>
+            <nap>szerda</nap>
+            <tol>12:00</tol>
+            <ig>14:35</ig>
+        </idopont>
+        <helyszin>132. Terem</helyszin>
+        <oktato>Perlaki Attila</oktato>
+        <szak>Programtervező Informatikus</szak>
+    </ora>
+
+    <ora id="6" tipus="eloadas">
+        <kurzus>Fordítóprogramok</kurzus>
+        <idopont>
+            <nap>szerda</nap>
+            <tol>17:35</tol>
+            <ig>19:10</ig>
+        </idopont>
+        <helyszin>Online</helyszin>
+        <oktato>TÚri József</oktato>
+        <szak>Programtervező Informatikus</szak>
+    </ora>
+
+    <ora id="7" tipus="eloadas">
+        <kurzus>Hálózati architektúrák és protokollok</kurzus>
+        <idopont>
+            <nap>csütörtök</nap>
+            <tol>9:00</tol>
+            <ig>10:25</ig>
+        </idopont>
+        <helyszin>Online</helyszin>
+        <oktato>Dr. Mileff Péter</oktato>
+        <szak>Programtervező Informatikus</szak>
+    </ora>
+
+    <ora id="8" tipus="gyakorlat">
+        <kurzus>Webkönyvtárak</kurzus>
+        <idopont>
+            <nap>csütörtök</nap>
+            <tol>11:30</tol>
+            <ig>12:55</ig>
+        </idopont>
+        <helyszin>TBD</helyszin>
+        <oktato>Dr. Bednarik László</oktato>
+        <szak>Programtervező Informatikus</szak>
+    </ora>
+
+</efew32_orarend>
