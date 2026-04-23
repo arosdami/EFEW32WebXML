@@ -1,0 +1,106 @@
+[
+  {
+    "@id": "1",
+    "@tipus": "eloadas",
+    "kurzus": "Számításelmélet",
+    "idopont": {
+      "nap": "hétfő",
+      "tol": "9:00",
+      "ig": "12:05"
+    },
+    "helyszin": "Online",
+    "oktato": "Dr. Veres Laura",
+    "szak": "Programtervező Informatikus"
+  },
+  {
+    "@id": "2",
+    "@tipus": "gyakorlat",
+    "kurzus": "Komputergrafika és képfeldolgozás",
+    "idopont": {
+      "nap": "kedd",
+      "tol": "12:10",
+      "ig": "13:45"
+    },
+    "helyszin": "Online",
+    "oktato": "Mileff Péter",
+    "szak": "Programtervező Informatikus"
+  },
+  {
+    "@id": "3",
+    "@tipus": "gyakorlat",
+    "kurzus": "Alkalmazások fejlesztése projekt labor II.",
+    "idopont": {
+      "nap": "kedd",
+      "tol": "16:00",
+      "ig": "19:10"
+    },
+    "helyszin": "Online",
+    "oktato": "Dr. Godo Zoltan",
+    "szak": "Programtervező Informatikus"
+  },
+  {
+    "@id": "4",
+    "@tipus": "eloadas",
+    "kurzus": "Valószínűségszámítás és statisztika",
+    "idopont": {
+      "nap": "szerda",
+      "tol": "8:00",
+      "ig": "11:15"
+    },
+    "helyszin": "111. Terem",
+    "oktato": "Kucsinka Katalin",
+    "szak": "Programtervező Informatikus"
+  },
+  {
+    "@id": "5",
+    "@tipus": "eloadas",
+    "kurzus": "Oktatás és gamifikáció, videojáték-tanulmányok",
+    "idopont": {
+      "nap": "szerda",
+      "tol": "12:00",
+      "ig": "14:35"
+    },
+    "helyszin": "132. Terem",
+    "oktato": "Perlaki Attila",
+    "szak": "Programtervező Informatikus"
+  },
+  {
+    "@id": "6",
+    "@tipus": "eloadas",
+    "kurzus": "Fordítóprogramok",
+    "idopont": {
+      "nap": "szerda",
+      "tol": "17:35",
+      "ig": "19:10"
+    },
+    "helyszin": "Online",
+    "oktato": "TÚri József",
+    "szak": "Programtervező Informatikus"
+  },
+  {
+    "@id": "7",
+    "@tipus": "eloadas",
+    "kurzus": "Hálózati architektúrák és protokollok",
+    "idopont": {
+      "nap": "csütörtök",
+      "tol": "9:00",
+      "ig": "10:25"
+    },
+    "helyszin": "Online",
+    "oktato": "Dr. Mileff Péter",
+    "szak": "Programtervező Informatikus"
+  },
+  {
+    "@id": "8",
+    "@tipus": "gyakorlat",
+    "kurzus": "Webkönyvtárak",
+    "idopont": {
+      "nap": "csütörtök",
+      "tol": "11:30",
+      "ig": "12:55"
+    },
+    "helyszin": "TBD",
+    "oktato": "Dr. Bednarik László",
+    "szak": "Programtervező Informatikus"
+  }
+]

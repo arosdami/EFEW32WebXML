@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EFEW32 Órarend JSON feldolgozás</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .ora-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fafafa;
+        }
+        
+        .ora-header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            margin: -15px -15px 15px -15px;
+            border-radius: 8px 8px 0 0;
+            font-weight: bold;
+        }
+        
+        .field {
+            margin-bottom: 8px;
+            padding: 5px;
+            border-left: 3px solid #007bff;
+            background-color: #f8f9fa;
+        }
+        
+        .field-label {
+            font-weight: bold;
+            color: #555;
+            display: inline-block;
+            width: 100px;
+        }
+        
+        .field-value {
+            color: #333;
+        }
+        
+        .idopont {
+            background-color: #e9ecef;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        
+        .eloadas {
+            border-left-color: #28a745;
+        }
+        
+        .gyakorlat {
+            border-left-color: #ffc107;
+        }
+        
+        .eloadas .ora-header {
+            background-color: #28a745;
+        }
+        
+        .gyakorlat .ora-header {
+            background-color: #ffc107;
+            color: #333;
+        }
+        
+        .summary {
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>EFEW32 Órarend - JSON Feldolgozás</h1>
+        <div id="orarend-container"></div>
+        <div id="summary" class="summary"></div>
+    </div>
+
+    <script>
+        // JSON adatok (az EFEW32_orarend.json tartalma)
+        const orarendData = [
+            {
+                "@id": "1",
+                "@tipus": "eloadas",
+                "kurzus": "Számításelmélet",
+                "idopont": {
+                    "nap": "hétfő",
+                    "tol": "9:00",
+                    "ig": "12:05"
+                },
+                "helyszin": "Online",
+                "oktato": "Dr. Veres Laura",
+                "szak": "Programtervező Informatikus"
+            },
+            {
+                "@id": "2",
+                "@tipus": "gyakorlat",
+                "kurzus": "Komputergrafika és képfeldolgozás",
+                "idopont": {
+                    "nap": "kedd",
+                    "tol": "12:10",
+                    "ig": "13:45"
+                },
+                "helyszin": "Online",
+                "oktato": "Mileff Péter",
+                "szak": "Programtervező Informatikus"
+            },
+            {
+                "@id": "3",
+                "@tipus": "gyakorlat",
+                "kurzus": "Alkalmazások fejlesztése projekt labor II.",
+                "idopont": {
+                    "nap": "kedd",
+                    "tol": "16:00",
+                    "ig": "19:10"
+                },
+                "helyszin": "Online",
+                "oktato": "Dr. Godo Zoltan",
+                "szak": "Programtervező Informatikus"
+            },
+            {
+                "@id": "4",
+                "@tipus": "eloadas",
+                "kurzus": "Valószínűségszámítás és statisztika",
+                "idopont": {
+                    "nap": "szerda",
+                    "tol": "8:00",
+                    "ig": "11:15"
+                },
+                "helyszin": "111. Terem",
+                "oktato": "Kucsinka Katalin",
+                "szak": "Programtervező Informatikus"
+            },
+            {
+                "@id": "5",
+                "@tipus": "eloadas",
+                "kurzus": "Oktatás és gamifikáció, videojáték-tanulmányok",
+                "idopont": {
+                    "nap": "szerda",
+                    "tol": "12:00",
+                    "ig": "14:35"
+                },
+                "helyszin": "132. Terem",
+                "oktato": "Perlaki Attila",
+                "szak": "Programtervező Informatikus"
+            },
+            {
+                "@id": "6",
+                "@tipus": "eloadas",
+                "kurzus": "Fordítóprogramok",
+                "idopont": {
+                    "nap": "szerda",
+                    "tol": "17:35",
+                    "ig": "19:10"
+                },
+                "helyszin": "Online",
+                "oktato": "TÚri József",
+                "szak": "Programtervező Informatikus"
+            },
+            {
+                "@id": "7",
+                "@tipus": "eloadas",
+                "kurzus": "Hálózati architektúrák és protokollok",
+                "idopont": {
+                    "nap": "csütörtök",
+                    "tol": "9:00",
+                    "ig": "10:25"
+                },
+                "helyszin": "Online",
+                "oktato": "Dr. Mileff Péter",
+                "szak": "Programtervező Informatikus"
+            },
+            {
+                "@id": "8",
+                "@tipus": "gyakorlat",
+                "kurzus": "Webkönyvtárak",
+                "idopont": {
+                    "nap": "csütörtök",
+                    "tol": "11:30",
+                    "ig": "12:55"
+                },
+                "helyszin": "TBD",
+                "oktato": "Dr. Bednarik László",
+                "szak": "Programtervező Informatikus"
+            }
+        ];
+
+        function displayOrarend() {
+            const container = document.getElementById('orarend-container');
+            let htmlContent = '';
+            
+            orarendData.forEach((ora, index) => {
+                const tipusClass = ora['@tipus'];
+                const tipusText = ora['@tipus'] === 'eloadas' ? 'Előadás' : 'Gyakorlat';
+                
+                htmlContent += `
+                    <div class="ora-card ${tipusClass}">
+                        <div class="ora-header">
+                            Óra #${ora['@id']} - ${tipusText}
+                        </div>
+                        
+                        <div class="field">
+                            <span class="field-label">Kurzus:</span>
+                            <span class="field-value">${ora.kurzus}</span>
+                        </div>
+                        
+                        <div class="idopont">
+                            <div class="field">
+                                <span class="field-label">Időpont:</span>
+                            </div>
+                            <div class="field">
+                                <span class="field-label">Nap:</span>
+                                <span class="field-value">${ora.idopont.nap}</span>
+                            </div>
+                            <div class="field">
+                                <span class="field-label">Kezdés:</span>
+                                <span class="field-value">${ora.idopont.tol}</span>
+                            </div>
+                            <div class="field">
+                                <span class="field-label">Befejezés:</span>
+                                <span class="field-value">${ora.idopont.ig}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="field">
+                            <span class="field-label">Helyszín:</span>
+                            <span class="field-value">${ora.helyszin}</span>
+                        </div>
+                        
+                        <div class="field">
+                            <span class="field-label">Oktató:</span>
+                            <span class="field-value">${ora.oktato}</span>
+                        </div>
+                        
+                        <div class="field">
+                            <span class="field-label">Szak:</span>
+                            <span class="field-value">${ora.szak}</span>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = htmlContent;
+            
+            // Összegzés
+            const summary = document.getElementById('summary');
+            const eloadasokSzama = orarendData.filter(ora => ora['@tipus'] === 'eloadas').length;
+            const gyakorlatokSzama = orarendData.filter(ora => ora['@tipus'] === 'gyakorlat').length;
+            
+            summary.innerHTML = `
+                <strong>Összegzés:</strong> Összesen ${orarendData.length} óra található, 
+                ebből ${eloadasokSzama} előadás és ${gyakorlatokSzama} gyakorlat.
+            `;
+        }
+
+        // Oldal betöltésekor megjelenítjük az órarendet
+        document.addEventListener('DOMContentLoaded', displayOrarend);
+    </script>
+</body>
+</html>
