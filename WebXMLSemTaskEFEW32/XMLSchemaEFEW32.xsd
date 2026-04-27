@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+    <!-- Egyszerű típusok -->
+    <xs:simpleType name="FelhasznaloIDType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="F[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TagIDType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="T[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TipusIDType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="TT[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TelefonszamIDType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="TSZ[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="MegujitasIDType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="M[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="EsemenyIDType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="E[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TagEsemenyIDType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="TE[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SzerepkorType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Admin"/>
+            <xs:enumeration value="Szervező"/>
+            <xs:enumeration value="Vendég"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="AktivType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Igen"/>
+            <xs:enumeration value="Nem"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TelefonTipusType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Mobil"/>
+            <xs:enumeration value="Otthoni"/>
+            <xs:enumeration value="Munkahelyi"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="EmailTipusType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Elsődleges"/>
+            <xs:enumeration value="Másodlagos"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="EmailType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TelefonszamType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\+36[0-9]{9}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="FizetesiModType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Bankkártya"/>
+            <xs:enumeration value="Banki átutalás"/>
+            <xs:enumeration value="PayPal"/>
+            <xs:enumeration value="Készpénz"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="IranyitoszamType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Komplex típusok -->
+    <xs:complexType name="FelhasznaloType">
+        <xs:sequence>
+            <xs:element name="Felhasznalonev" type="xs:string"/>
+            <xs:element name="Jelszo" type="xs:string"/>
+            <xs:element name="Szerepkor" type="SzerepkorType"/>
+            <xs:element name="Letrehozva" type="xs:date"/>
+            <xs:element name="UtoljaraBejelentkezve" type="xs:dateTime"/>
+        </xs:sequence>
+        <xs:attribute name="FelhasznaloID" type="FelhasznaloIDType" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="TagType">
+        <xs:sequence>
+            <xs:element name="Vezeteknev" type="xs:string"/>
+            <xs:element name="Keresztnev" type="xs:string"/>
+            <xs:element name="Email" type="EmailType"/>
+            <xs:element name="SzuletesiDatum" type="xs:date"/>
+            <xs:element name="TagsagKezdete" type="xs:date"/>
+            <xs:element name="Aktiv" type="AktivType"/>
+        </xs:sequence>
+        <xs:attribute name="TagID" type="TagIDType" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="TagsagiTipusType">
+        <xs:sequence>
+            <xs:element name="Megnevezes" type="xs:string"/>
+            <xs:element name="Idotartam" type="xs:positiveInteger"/>
+            <xs:element name="Ar" type="xs:positiveInteger"/>
+        </xs:sequence>
+        <xs:attribute name="TipusID" type="TipusIDType" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="TelefonszamType">
+        <xs:sequence>
+            <xs:element name="Telefonszam" type="TelefonszamType"/>
+            <xs:element name="Tipus" type="TelefonTipusType"/>
+            <xs:element name="TagID" type="TagIDType"/>
+        </xs:sequence>
+        <xs:attribute name="TelefonszamID" type="TelefonszamIDType" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="MegujitasType">
+        <xs:sequence>
+            <xs:element name="Datum" type="xs:date"/>
+            <xs:element name="Netto" type="xs:positiveInteger"/>
+            <xs:element name="Brutto" type="xs:positiveInteger"/>
+            <xs:element name="Modszert" type="FizetesiModType"/>
+            <xs:element name="TagID" type="TagIDType"/>
+        </xs:sequence>
+        <xs:attribute name="MegujitasID" type="MegujitasIDType" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="EsemenyType">
+        <xs:sequence>
+            <xs:element name="Megnevezes" type="xs:string"/>
+            <xs:element name="Datum" type="xs:date"/>
+            <xs:element name="AlapHelyszin" type="xs:string"/>
+            <xs:element name="EsoHelyszin" type="xs:string"/>
+            <xs:element name="Dij" type="xs:nonNegativeInteger"/>
+        </xs:sequence>
+        <xs:attribute name="EsemenyID" type="EsemenyIDType" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="TagEsemenyType">
+        <xs:sequence>
+            <xs:element name="TagID" type="TagIDType"/>
+            <xs:element name="EsemenyID" type="EsemenyIDType"/>
+            <xs:element name="ReszveteliDij" type="xs:nonNegativeInteger"/>
+            <xs:element name="Megjegyzes" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="ID" type="TagEsemenyIDType" use="required"/>
+    </xs:complexType>
+
+    <!-- Gyökér elem -->
+    <xs:element name="TagsagiRendszer">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Felhasznalok">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Felhasznalo" type="FelhasznaloType" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Tagok">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Tag" type="TagType" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TagsagiTipusok">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="TagsagiTipus" type="TagsagiTipusType" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Telefonszamok">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Telefonszam" type="TelefonszamType" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Megujitasok">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Megujitas" type="MegujitasType" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Esemenyek">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Esemeny" type="EsemenyType" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TagEsemenyek">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="TagEsemeny" type="TagEsemenyType" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+
+        <!-- Kulcsok -->
+        <xs:key name="FelhasznaloKey">
+            <xs:selector xpath="Felhasznalok/Felhasznalo"/>
+            <xs:field xpath="@FelhasznaloID"/>
+        </xs:key>
+
+        <xs:key name="TagKey">
+            <xs:selector xpath="Tagok/Tag"/>
+            <xs:field xpath="@TagID"/>
+        </xs:key>
+
+        <xs:key name="TagsagiTipusKey">
+            <xs:selector xpath="TagsagiTipusok/TagsagiTipus"/>
+            <xs:field xpath="@TipusID"/>
+        </xs:key>
+
+        <xs:key name="TelefonszamKey">
+            <xs:selector xpath="Telefonszamok/Telefonszam"/>
+            <xs:field xpath="@TelefonszamID"/>
+        </xs:key>
+
+        <xs:key name="MegujitasKey">
+            <xs:selector xpath="Megujitasok/Megujitas"/>
+            <xs:field xpath="@MegujitasID"/>
+        </xs:key>
+
+        <xs:key name="EsemenyKey">
+            <xs:selector xpath="Esemenyek/Esemeny"/>
+            <xs:field xpath="@EsemenyID"/>
+        </xs:key>
+
+        <xs:key name="TagEsemenyKey">
+            <xs:selector xpath="TagEsemenyek/TagEsemeny"/>
+            <xs:field xpath="@ID"/>
+        </xs:key>
+
+        <!-- Hivatkozások -->
+        <xs:keyref name="TelefonszamTagRef" refer="TagKey">
+            <xs:selector xpath="Telefonszamok/Telefonszam"/>
+            <xs:field xpath="TagID"/>
+        </xs:keyref>
+
+        <xs:keyref name="MegujitasTagRef" refer="TagKey">
+            <xs:selector xpath="Megujitasok/Megujitas"/>
+            <xs:field xpath="TagID"/>
+        </xs:keyref>
+
+        <xs:keyref name="TagEsemenyTagRef" refer="TagKey">
+            <xs:selector xpath="TagEsemenyek/TagEsemeny"/>
+            <xs:field xpath="TagID"/>
+        </xs:keyref>
+
+        <xs:keyref name="TagEsemenyEsemenyRef" refer="EsemenyKey">
+            <xs:selector xpath="TagEsemenyek/TagEsemeny"/>
+            <xs:field xpath="EsemenyID"/>
+        </xs:keyref>
+
+        <!-- Egyediségi megszorítások -->
+        <xs:unique name="UniqueFelhasznalonev">
+            <xs:selector xpath="Felhasznalok/Felhasznalo"/>
+            <xs:field xpath="Felhasznalonev"/>
+        </xs:unique>
+
+        <xs:unique name="UniqueEmail">
+            <xs:selector xpath="Tagok/Tag"/>
+            <xs:field xpath="Email"/>
+        </xs:unique>
+
+        <xs:unique name="UniqueTagEsemeny">
+            <xs:selector xpath="TagEsemenyek/TagEsemeny"/>
+            <xs:field xpath="TagID"/>
+            <xs:field xpath="EsemenyID"/>
+        </xs:unique>
+    </xs:element>
+
+</xs:schema>

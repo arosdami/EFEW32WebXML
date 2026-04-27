@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TagsagiRendszer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="XMLSchemaEFEW32.xsd">
+    
+    <Felhasznalok>
+        <Felhasznalo FelhasznaloID="F001">
+            <Felhasznalonev>admin_efew32</Felhasznalonev>
+            <Jelszo>hashed_password_001</Jelszo>
+            <Szerepkor>Admin</Szerepkor>
+            <Letrehozva>2024-01-15</Letrehozva>
+            <UtoljaraBejelentkezve>2025-04-09T10:30:00</UtoljaraBejelentkezve>
+        </Felhasznalo>
+        
+        <Felhasznalo FelhasznaloID="F002">
+            <Felhasznalonev>kiss_janos_efew32</Felhasznalonev>
+            <Jelszo>hashed_password_002</Jelszo>
+            <Szerepkor>Szervező</Szerepkor>
+            <Letrehozva>2024-02-20</Letrehozva>
+            <UtoljaraBejelentkezve>2025-04-08T14:22:00</UtoljaraBejelentkezve>
+        </Felhasznalo>
+        
+        <Felhasznalo FelhasznaloID="F003">
+            <Felhasznalonev>toth_maria_efew32</Felhasznalonev>
+            <Jelszo>hashed_password_003</Jelszo>
+            <Szerepkor>Vendég</Szerepkor>
+            <Letrehozva>2024-03-10</Letrehozva>
+            <UtoljaraBejelentkezve>2025-04-07T09:15:00</UtoljaraBejelentkezve>
+        </Felhasznalo>
+    </Felhasznalok>
+    
+    <Tagok>
+        <Tag TagID="T001">
+            <Vezeteknev>Nagy</Vezeteknev>
+            <Keresztnev>Anna</Keresztnev>
+            <Email>anna.nagy@example.com</Email>
+            <SzuletesiDatum>1985-03-12</SzuletesiDatum>
+            <TagsagKezdete>2024-01-15</TagsagKezdete>
+            <Aktiv>Igen</Aktiv>
+        </Tag>
+        
+        <Tag TagID="T002">
+            <Vezeteknev>Kiss</Vezeteknev>
+            <Keresztnev>János</Keresztnev>
+            <Email>janos.kiss@example.com</Email>
+            <SzuletesiDatum>1990-07-25</SzuletesiDatum>
+            <TagsagKezdete>2024-02-20</TagsagKezdete>
+            <Aktiv>Nem</Aktiv>
+        </Tag>
+        
+        <Tag TagID="T003">
+            <Vezeteknev>Tóth</Vezeteknev>
+            <Keresztnev>Mária</Keresztnev>
+            <Email>maria.toth@example.com</Email>
+            <SzuletesiDatum>1988-11-08</SzuletesiDatum>
+            <TagsagKezdete>2024-03-10</TagsagKezdete>
+            <Aktiv>Igen</Aktiv>
+        </Tag>
+    </Tagok>
+    
+    <TagsagiTipusok>
+        <TagsagiTipus TipusID="TT001">
+            <Megnevezes>Prémium tagság</Megnevezes>
+            <Idotartam>12</Idotartam>
+            <Ar>50000</Ar>
+        </TagsagiTipus>
+        
+        <TagsagiTipus TipusID="TT002">
+            <Megnevezes>Standard tagság</Megnevezes>
+            <Idotartam>6</Idotartam>
+            <Ar>25000</Ar>
+        </TagsagiTipus>
+    </TagsagiTipusok>
+    
+    <Telefonszamok>
+        <Telefonszam TelefonszamID="TSZ001">
+            <Telefonszam>+36301234567</Telefonszam>
+            <Tipus>Mobil</Tipus>
+            <TagID>T001</TagID>
+        </Telefonszam>
+        
+        <Telefonszam TelefonszamID="TSZ002">
+            <Telefonszam>+3612345678</Telefonszam>
+            <Tipus>Otthoni</Tipus>
+            <TagID>T001</TagID>
+        </Telefonszam>
+        
+        <Telefonszam TelefonszamID="TSZ003">
+            <Telefonszam>+3618765432</Telefonszam>
+            <Tipus>Munkahelyi</Tipus>
+            <TagID>T001</TagID>
+        </Telefonszam>
+        
+        <Telefonszam TelefonszamID="TSZ004">
+            <Telefonszam>+36309876543</Telefonszam>
+            <Tipus>Mobil</Tipus>
+            <TagID>T002</TagID>
+        </Telefonszam>
+        
+        <Telefonszam TelefonszamID="TSZ005">
+            <Telefonszam>+3652123456</Telefonszam>
+            <Tipus>Otthoni</Tipus>
+            <TagID>T002</TagID>
+        </Telefonszam>
+        
+        <Telefonszam TelefonszamID="TSZ006">
+            <Telefonszam>+36304567890</Telefonszam>
+            <Tipus>Mobil</Tipus>
+            <TagID>T003</TagID>
+        </Telefonszam>
+        
+        <Telefonszam TelefonszamID="TSZ007">
+            <Telefonszam>+3662123456</Telefonszam>
+            <Tipus>Munkahelyi</Tipus>
+            <TagID>T003</TagID>
+        </Telefonszam>
+    </Telefonszamok>
+    
+    <Megujitasok>
+        <Megujitas MegujitasID="M001">
+            <Datum>2024-01-15</Datum>
+            <Netto>45000</Netto>
+            <Brutto>50000</Brutto>
+            <Modszert>Bankkártya</Modszert>
+            <TagID>T001</TagID>
+        </Megujitas>
+        
+        <Megujitas MegujitasID="M002">
+            <Datum>2024-02-20</Datum>
+            <Netto>22500</Netto>
+            <Brutto>25000</Brutto>
+            <Modszert>Banki átutalás</Modszert>
+            <TagID>T002</TagID>
+        </Megujitas>
+        
+        <Megujitas MegujitasID="M003">
+            <Datum>2024-03-10</Datum>
+            <Netto>45000</Netto>
+            <Brutto>50000</Brutto>
+            <Modszert>PayPal</Modszert>
+            <TagID>T003</TagID>
+        </Megujitas>
+    </Megujitasok>
+    
+    <Esemenyek>
+        <Esemeny EsemenyID="E001">
+            <Megnevezes>Webfejlesztési Konferencia</Megnevezes>
+            <Datum>2024-03-15</Datum>
+            <AlapHelyszin>Budapest, Kongresszusi Központ</AlapHelyszin>
+            <EsoHelyszin>Budapest, Hotel Marriott</EsoHelyszin>
+            <Dij>15000</Dij>
+        </Esemeny>
+        
+        <Esemeny EsemenyID="E002">
+            <Megnevezes>Adatbázis Tervező Workshop</Megnevezes>
+            <Datum>2024-06-20</Datum>
+            <AlapHelyszin>Debrecen, Egyetemi Campus</AlapHelyszin>
+            <EsoHelyszin>Debrecen, Főépület</EsoHelyszin>
+            <Dij>20000</Dij>
+        </Esemeny>
+        
+        <Esemeny EsemenyID="E003">
+            <Megnevezes>Python Workshop</Megnevezes>
+            <Datum>2024-04-10</Datum>
+            <AlapHelyszin>Szeged, Informatikai Kar</AlapHelyszin>
+            <EsoHelyszin>Szeged, Főépület</EsoHelyszin>
+            <Dij>12000</Dij>
+        </Esemeny>
+        
+        <Esemeny EsemenyID="E004">
+            <Megnevezes>React Konferencia</Megnevezes>
+            <Datum>2024-09-15</Datum>
+            <AlapHelyszin>Pécs, Tudományegyetem</AlapHelyszin>
+            <EsoHelyszin>Pécs, Központi épület</EsoHelyszin>
+            <Dij>18000</Dij>
+        </Esemeny>
+        
+        <Esemeny EsemenyID="E005">
+            <Megnevezes>UI/UX Design Workshop</Megnevezes>
+            <Datum>2024-11-20</Datum>
+            <AlapHelyszin>Győr, Műszaki Egyetem</AlapHelyszin>
+            <EsoHelyszin>Győr, A épület</EsoHelyszin>
+            <Dij>22000</Dij>
+        </Esemeny>
+    </Esemenyek>
+    
+    <TagEsemenyek>
+        <TagEsemeny ID="TE001">
+            <TagID>T001</TagID>
+            <EsemenyID>E001</EsemenyID>
+            <ReszveteliDij>0</ReszveteliDij>
+            <Megjegyzes>Prémium tagként ingyenes</Megjegyzes>
+        </TagEsemeny>
+        
+        <TagEsemeny ID="TE002">
+            <TagID>T001</TagID>
+            <EsemenyID>E002</EsemenyID>
+            <ReszveteliDij>0</ReszveteliDij>
+            <Megjegyzes>Prémium tagként ingyenes</Megjegyzes>
+        </TagEsemeny>
+        
+        <TagEsemeny ID="TE003">
+            <TagID>T002</TagID>
+            <EsemenyID>E003</EsemenyID>
+            <ReszveteliDij>12000</ReszveteliDij>
+            <Megjegyzes>Standard tagként fizetős</Megjegyzes>
+        </TagEsemeny>
+        
+        <TagEsemeny ID="TE004">
+            <TagID>T003</TagID>
+            <EsemenyID>E004</EsemenyID>
+            <ReszveteliDij>0</ReszveteliDij>
+            <Megjegyzes>Prémium tagként ingyenes</Megjegyzes>
+        </TagEsemeny>
+        
+        <TagEsemeny ID="TE005">
+            <TagID>T003</TagID>
+            <EsemenyID>E005</EsemenyID>
+            <ReszveteliDij>0</ReszveteliDij>
+            <Megjegyzes>Prémium tagként ingyenes</Megjegyzes>
+        </TagEsemeny>
+    </TagEsemenyek>
+    
+</TagsagiRendszer>

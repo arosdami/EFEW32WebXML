@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TagsagiRendszer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="XMLSchemaEFEW32.xsd">
+    
+    <Felhasznalok>
+        <Felhasznalo FelhasznaloID="F001">
+            <Felhasznalonev>admin_efew32</Felhasznalonev>
+            <Jelszo>hashed_password_001</Jelszo>
+            <Szerepkor>Admin</Szerepkor>
+            <Letrehozva>2024-01-15</Letrehozva>
+            <UtoljaraBejelentkezve>2025-04-09T10:30:00</UtoljaraBejelentkezve>
+            
+            <Tag TagID="T001">
+                <Nev>Nagy Anna</Nev>
+                <Email>anna.nagy@example.com</Email>
+                <SzuletesiDatum>1985-03-12</SzuletesiDatum>
+                <TagsagKezdete>2024-01-15</TagsagKezdete>
+                <TagsagVege>2025-01-15</TagsagVege>
+                <Aktiv>true</Aktiv>
+                
+                <Cim>
+                    <Ország>Magyarország</Ország>
+                    <Varos>Budapest</Varos>
+                    <Utca>Kossuth Lajos utca</Utca>
+                    <Hazszam>42</Hazszam>
+                    <Iranyitoszam>1051</Iranyitoszam>
+                </Cim>
+                
+                <Telefonszamok>
+                    <Telefonszam tipus="Mobil">+36301234567</Telefonszam>
+                    <Telefonszam tipus="Otthoni">+3612345678</Telefonszam>
+                    <Telefonszam tipus="Munkahelyi">+3618765432</Telefonszam>
+                </Telefonszamok>
+                
+                <EmailCimek>
+                    <Email tipus="Elsődleges">anna.nagy@example.com</Email>
+                    <Email tipus="Másodlagos">anna.nagy.work@example.com</Email>
+                </EmailCimek>
+                
+                <Kepessegek>
+                    <Kepesseg>Projektmenedzsment</Kepesseg>
+                    <Kepesseg>Adatanalitika</Kepesseg>
+                    <Kepesseg>Java programozás</Kepesseg>
+                </Kepessegek>
+                
+                <ErdekeltségiKörök>
+                    <ErdekeltségiKör>Mesterséges intelligencia</ErdekeltségiKör>
+                    <ErdekeltségiKör>Adatbázis tervezés</ErdekeltségiKör>
+                    <ErdekeltségiKör>Web technológiák</ErdekeltségiKör>
+                </ErdekeltségiKörök>
+                
+                <TagsagiTipus TipusID="TT001">
+                    <Megnevezes>Prémium tagság</Megnevezes>
+                    <Leiras>Teljes körű hozzáférés minden szolgáltatáshoz</Leírás>
+                    <Ar>50000</Ar>
+                    <Idotartam>12</Idotartam>
+                    <Előnyök>
+                        <Előny>Minden esemény ingyenes</Előny>
+                        <Előny>Prémium támogatás</Előny>
+                        <Előny>Exkluzív tartalmak</Előny>
+                    </Előnyök>
+                </TagsagiTipus>
+                
+                <Megujitasok>
+                    <Megujitas MegujitasID="M001">
+                        <Datum>2024-01-15</Datum>
+                        <Osszeg>50000</Osszeg>
+                        <Modszer>Bankkártya</Modszer>
+                        <Lejar>2025-01-15</Lejar>
+                        <Megjegyzes>Éves megújítás</Megjegyzes>
+                        
+                        <Esemenyek>
+                            <Esemeny EsemenyID="E001">
+                                <Megnevezes>Webfejlesztési Konferencia</Megnevezes>
+                                <Datum>2024-03-15</Datum>
+                                <Helyszín>Budapest, Kongresszusi Központ</Helyszín>
+                                <Leiras>Legújabb webfejlesztési technológiák és trendek</Leírás>
+                                <MaxResztvevő>200</MaxResztvevő>
+                                <Dij>15000</Dij>
+                                
+                                <Reszvetel>
+                                    <ReszveteliDij>0</ReszveteliDij>
+                                    <Megjegyzes>Prémium tagként ingyenes</Megjegyzes>
+                                    <RegisztracioDatuma>2024-02-01</RegisztracioDatuma>
+                                </Reszvetel>
+                            </Esemeny>
+                            
+                            <Esemeny EsemenyID="E002">
+                                <Megnevezes>Adatbázis Tervező Workshop</Megnevezes>
+                                <Datum>2024-06-20</Datum>
+                                <Helyszín>Debrecen, Egyetemi Campus</Helyszín>
+                                <Leiras>Haladó adatbázis tervezési technikák</Leírás>
+                                <MaxResztvevő>50</MaxResztvevő>
+                                <Dij>20000</Dij>
+                                
+                                <Reszvetel>
+                                    <ReszveteliDij>0</ReszveteliDij>
+                                    <Megjegyzes>Prémium tagként ingyenes</Megjegyzes>
+                                    <RegisztracioDatuma>2024-05-15</RegisztracioDatuma>
+                                </Reszvetel>
+                            </Esemeny>
+                        </Esemenyek>
+                    </Megujitas>
+                </Megujitasok>
+            </Tag>
+        </Felhasznalo>
+        
+        <Felhasznalo FelhasznaloID="F002">
+            <Felhasznalonev>kiss_janos_efew32</Felhasznalonev>
+            <Jelszo>hashed_password_002</Jelszo>
+            <Szerepkor>Tag</Szerepkor>
+            <Letrehozva>2024-02-20</Letrehozva>
+            <UtoljaraBejelentkezve>2025-04-08T14:22:00</UtoljaraBejelentkezve>
+            
+            <Tag TagID="T002">
+                <Nev>Kiss János</Nev>
+                <Email>janos.kiss@example.com</Email>
+                <SzuletesiDatum>1990-07-25</SzuletesiDatum>
+                <TagsagKezdete>2024-02-20</TagsagKezdete>
+                <TagsagVege>2024-08-20</TagsagVege>
+                <Aktiv>false</Aktiv>
+                
+                <Cim>
+                    <Ország>Magyarország</Ország>
+                    <Varos>Debrecen</Varos>
+                    <Utca>Nagyerdei körút</Utca>
+                    <Hazszam>98</Hazszam>
+                    <Iranyitoszam>4032</Iranyitoszam>
+                </Cim>
+                
+                <Telefonszamok>
+                    <Telefonszam tipus="Mobil">+36309876543</Telefonszam>
+                    <Telefonszam tipus="Otthoni">+3652123456</Telefonszam>
+                </Telefonszamok>
+                
+                <EmailCimek>
+                    <Email tipus="Elsődleges">janos.kiss@example.com</Email>
+                </EmailCimek>
+                
+                <Kepessegek>
+                    <Kepesseg>Python programozás</Kepesseg>
+                    <Kepesseg>Machine Learning</Kepesseg>
+                    <Kepesseg>Statistical Analysis</Kepesseg>
+                </Kepessegek>
+                
+                <ErdekeltségiKörök>
+                    <ErdekeltségiKör>Machine Learning</ErdekeltségiKör>
+                    <ErdekeltségiKör>Data Science</ErdekeltségiKör>
+                    <ErdekeltségiKör>Python</ErdekeltségiKör>
+                </ErdekeltségiKörök>
+                
+                <TagsagiTipus TipusID="TT002">
+                    <Megnevezes>Standard tagság</Megnevezes>
+                    <Leiras>Alap hozzáférés a szolgáltatásokhoz</Leírás>
+                    <Ar>25000</Ar>
+                    <Idotartam>6</Idotartam>
+                    <Előnyök>
+                        <Előny>Havi események</Előny>
+                        <Előny>Alap támogatás</Előny>
+                    </Előnyök>
+                </TagsagiTipus>
+                
+                <Megujitasok>
+                    <Megujitas MegujitasID="M002">
+                        <Datum>2024-02-20</Datum>
+                        <Osszeg>25000</Osszeg>
+                        <Modszer>Banki átutalás</Modszer>
+                        <Lejar>2024-08-20</Lejar>
+                        <Megjegyzes>Féléves tagság</Megjegyzes>
+                        
+                        <Esemenyek>
+                            <Esemeny EsemenyID="E003">
+                                <Megnevezes>Python Workshop</Megnevezes>
+                                <Datum>2024-04-10</Datum>
+                                <Helyszín>Szeged, Informatikai Kar</Helyszín>
+                                <Leiras>Python alapok és haladó technikák</Leírás>
+                                <MaxResztvevő>30</MaxResztvevő>
+                                <Dij>12000</Dij>
+                                
+                                <Reszvetel>
+                                    <ReszveteliDij>12000</ReszveteliDij>
+                                    <Megjegyzes>Standard tagként fizetős</Megjegyzes>
+                                    <RegisztracioDatuma>2024-03-25</RegisztracioDatuma>
+                                </Reszvetel>
+                            </Esemeny>
+                        </Esemenyek>
+                    </Megujitas>
+                </Megujitasok>
+            </Tag>
+        </Felhasznalo>
+        
+        <Felhasznalo FelhasznaloID="F003">
+            <Felhasznalonev>toth_maria_efew32</Felhasznalonev>
+            <Jelszo>hashed_password_003</Jelszo>
+            <Szerepkor>Tag</Szerepkor>
+            <Letrehozva>2024-03-10</Letrehozva>
+            <UtoljaraBejelentkezve>2025-04-07T09:15:00</UtoljaraBejelentkezve>
+            
+            <Tag TagID="T003">
+                <Nev>Tóth Mária</Nev>
+                <Email>maria.toth@example.com</Email>
+                <SzuletesiDatum>1988-11-08</SzuletesiDatum>
+                <TagsagKezdete>2024-03-10</TagsagKezdete>
+                <TagsagVege>2025-03-10</TagsagVege>
+                <Aktiv>true</Aktiv>
+                
+                <Cim>
+                    <Ország>Magyarország</Ország>
+                    <Varos>Szeged</Varos>
+                    <Utca>Dugonics tér</Utca>
+                    <Hazszam>13</Hazszam>
+                    <Iranyitoszam>6722</Iranyitoszam>
+                </Cim>
+                
+                <Telefonszamok>
+                    <Telefonszam tipus="Mobil">+36304567890</Telefonszam>
+                    <Telefonszam tipus="Munkahelyi">+3662123456</Telefonszam>
+                </Telefonszamok>
+                
+                <EmailCimek>
+                    <Email tipus="Elsődleges">maria.toth@example.com</Email>
+                    <Email tipus="Másodlagos">maria.toth.work@example.com</Email>
+                </EmailCimek>
+                
+                <Kepessegek>
+                    <Kepesseg>Frontend fejlesztés</Kepesseg>
+                    <Kepesseg>UI/UX tervezés</Kepesseg>
+                    <Kepesseg>React</Kepesseg>
+                    <Kepesseg>CSS/SASS</Kepesseg>
+                </Kepessegek>
+                
+                <ErdekeltségiKörök>
+                    <ErdekeltségiKör>Web design</ErdekeltségiKör>
+                    <ErdekeltségiKör>User Experience</ErdekeltségiKör>
+                    <ErdekeltségiKör>JavaScript</ErdekeltségiKör>
+                    <ErdekeltségiKör>React</ErdekeltségiKör>
+                </ErdekeltségiKörök>
+                
+                <TagsagiTipus TipusID="TT001">
+                    <Megnevezes>Prémium tagság</Megnevezes>
+                    <Leiras>Teljes körű hozzáférés minden szolgáltatáshoz</Leírás>
+                    <Ar>50000</Ar>
+                    <Idotartam>12</Idotartam>
+                    <Előnyök>
+                        <Előny>Minden esemény ingyenes</Előny>
+                        <Előny>Prémium támogatás</Előny>
+                        <Előny>Exkluzív tartalmak</Előny>
+                    </Előnyök>
+                </TagsagiTipus>
+                
+                <Megujitasok>
+                    <Megujitas MegujitasID="M003">
+                        <Datum>2024-03-10</Datum>
+                        <Osszeg>50000</Osszeg>
+                        <Modszer>PayPal</Modszer>
+                        <Lejar>2025-03-10</Lejar>
+                        <Megjegyzes>Éves prémium tagság</Megjegyzes>
+                        
+                        <Esemenyek>
+                            <Esemeny EsemenyID="E004">
+                                <Megnevezes>React Konferencia</Megnevezes>
+                                <Datum>2024-09-15</Datum>
+                                <Helyszín>Pécs, Tudományegyetem</Helyszín>
+                                <Leírás>React és modern frontend technológiák</Leírás>
+                                <MaxResztvevő>150</MaxResztvevő>
+                                <Dij>18000</Dij>
+                                
+                                <Reszvetel>
+                                    <ReszveteliDij>0</ReszveteliDij>
+                                    <Megjegyzes>Prémium tagként ingyenes</Megjegyzes>
+                                    <RegisztracioDatuma>2024-08-01</RegisztracioDatuma>
+                                </Reszvetel>
+                            </Esemeny>
+                            
+                            <Esemeny EsemenyID="E005">
+                                <Megnevezes>UI/UX Design Workshop</Megnevezes>
+                                <Datum>2024-11-20</Datum>
+                                <Helyszín>Győr, Műszaki Egyetem</Helyszín>
+                                <Leírás>Modern felhasználói felület tervezés</Leírás>
+                                <MaxResztvevő>40</MaxResztvevő>
+                                <Dij>22000</Dij>
+                                
+                                <Reszvetel>
+                                    <ReszveteliDij>0</ReszveteliDij>
+                                    <Megjegyzes>Prémium tagként ingyenes</Megjegyzes>
+                                    <RegisztracioDatuma>2024-10-15</RegisztracioDatuma>
+                                </Reszvetel>
+                            </Esemeny>
+                        </Esemenyek>
+                    </Megujitas>
+                </Megujitasok>
+            </Tag>
+        </Felhasznalo>
+    </Felhasznalok>
+</TagsagiRendszer>
