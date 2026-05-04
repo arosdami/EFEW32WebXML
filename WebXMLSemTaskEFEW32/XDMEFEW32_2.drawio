@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Oldal-1" id="XDM_EFEW32">
-    <mxGraphModel dx="2622" dy="1708" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="1">
+    <mxGraphModel dx="3374" dy="2127" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="1">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -401,11 +401,6 @@
             <mxPoint x="-368.57142857142856" y="160.00000000000023" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="nW5RsYnrjOuhxGaY9bjU-162" connectable="0" parent="nW5RsYnrjOuhxGaY9bjU-143" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="N:1" vertex="1">
-          <mxGeometry relative="1" x="-0.4282" y="-4" as="geometry">
-            <mxPoint x="12" y="4" as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="nW5RsYnrjOuhxGaY9bjU-60" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="TagID" vertex="1">
           <mxGeometry height="80" width="80" x="987" y="555" as="geometry" />
         </mxCell>
@@ -417,11 +412,6 @@
               <mxPoint x="1480" y="350" />
               <mxPoint x="1350" y="350" />
             </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="nW5RsYnrjOuhxGaY9bjU-163" connectable="0" parent="nW5RsYnrjOuhxGaY9bjU-144" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1:N" vertex="1">
-          <mxGeometry relative="1" x="0.578" y="-2" as="geometry">
-            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="nW5RsYnrjOuhxGaY9bjU-61" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="EsemenyID" vertex="1">
@@ -730,11 +720,6 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="nW5RsYnrjOuhxGaY9bjU-159" connectable="0" parent="nW5RsYnrjOuhxGaY9bjU-141" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1:N" vertex="1">
-          <mxGeometry relative="1" x="-0.7662" y="2" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="nW5RsYnrjOuhxGaY9bjU-136" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="TagID" vertex="1">
           <mxGeometry height="80" width="80" x="-128" y="555" as="geometry" />
         </mxCell>
@@ -752,11 +737,6 @@
               <mxPoint x="-730" y="380" />
               <mxPoint x="-340" y="380" />
             </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="nW5RsYnrjOuhxGaY9bjU-161" connectable="0" parent="nW5RsYnrjOuhxGaY9bjU-142" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1:N" vertex="1">
-          <mxGeometry relative="1" x="-0.7042" y="4" as="geometry">
-            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="nW5RsYnrjOuhxGaY9bjU-138" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="TagID" vertex="1">
@@ -805,11 +785,6 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="nW5RsYnrjOuhxGaY9bjU-164" connectable="0" parent="nW5RsYnrjOuhxGaY9bjU-154" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1:N" vertex="1">
-          <mxGeometry relative="1" x="0.08" y="-4" as="geometry">
-            <mxPoint x="1" as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="nW5RsYnrjOuhxGaY9bjU-151" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="MegujitasID" vertex="1">
           <mxGeometry height="80" width="80" x="1360" y="555" as="geometry" />
         </mxCell>
@@ -828,18 +803,13 @@
         <mxCell id="nW5RsYnrjOuhxGaY9bjU-158" edge="1" parent="1" source="nW5RsYnrjOuhxGaY9bjU-156" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=1 4;" target="nW5RsYnrjOuhxGaY9bjU-54">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="370" y="30" />
-              <mxPoint x="370" y="210" />
-              <mxPoint x="-270" y="210" />
+              <mxPoint x="350" y="30" />
+              <mxPoint x="350" y="220" />
+              <mxPoint x="-270" y="220" />
               <mxPoint x="-270" y="270" />
               <mxPoint x="-980" y="270" />
               <mxPoint x="-980" y="135" />
             </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="nW5RsYnrjOuhxGaY9bjU-165" connectable="0" parent="nW5RsYnrjOuhxGaY9bjU-158" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1:N" vertex="1">
-          <mxGeometry relative="1" x="0.349" y="2" as="geometry">
-            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="nW5RsYnrjOuhxGaY9bjU-156" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="FelhasznaloID" vertex="1">
