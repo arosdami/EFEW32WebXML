@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><class>
+    <hallgato id="01">
+        <keresztnev>Péter</keresztnev>
+        <vezeteknev>Fekete</vezeteknev>
+        <becenev>petya</becenev>
+        <kor>22</kor>
+    </hallgato>
+
+    <hallgato id="02">
+        <keresztnev>Dorka</keresztnev>
+        <vezeteknev>Kék</vezeteknev>
+        <becenev>dorka</becenev>
+        <kor>20</kor>
+    </hallgato>
+
+    <hallgato id="03">
+        <keresztnev>Andrea</keresztnev>
+        <vezeteknev>Zsoldos</vezeteknev>
+        <becenev>andi</becenev>
+        <kor>18</kor>
+    </hallgato>
+</class>
