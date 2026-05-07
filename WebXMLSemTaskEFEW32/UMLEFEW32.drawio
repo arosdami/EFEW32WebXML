@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="UML Class Diagram" id="UML_EFEW32">
-    <mxGraphModel dx="706" dy="616" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1811" dy="1631" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -582,10 +582,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Node_Class" connectable="0" parent="1" style="group" value="" vertex="1">
-          <mxGeometry height="140" width="181" x="1702" y="378" as="geometry" />
+          <mxGeometry height="140" width="181" x="1076" y="1" as="geometry" />
         </mxCell>
         <mxCell id="Node_ClassTable" parent="Node_Class" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" value="&lt;h3 style=&quot;text-wrap-mode: wrap; font-weight: 500; line-height: 1.5; margin: 18.288px 0px 13.716px; color: rgb(64, 64, 64); font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, &amp;quot;Noto Sans&amp;quot;, Ubuntu, Cantarell, &amp;quot;Helvetica Neue&amp;quot;, Oxygen, &amp;quot;Open Sans&amp;quot;, sans-serif; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;&lt;font style=&quot;font-size: 15px; font-weight: normal;&quot;&gt;Node&lt;/font&gt;&lt;/h3&gt;" vertex="1">
-          <mxGeometry height="140" width="180" as="geometry" />
+          <mxGeometry height="220" width="180" as="geometry" />
         </mxCell>
         <mxCell id="Node_Attr" parent="Node_ClassTable" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" value="" vertex="1">
           <mxGeometry height="30" width="180" y="30" as="geometry" />
@@ -613,13 +613,26 @@
             <mxRectangle height="80" width="150" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="DomReadEFEW32_uses_Node" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1.013;exitY=0.777;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;exitPerimeter=0;" target="Node_Methods">
+        <mxCell id="tv83wv8QEXWZSXAw0ytr-119" parent="Node_ClassTable" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" value="" vertex="1">
+          <mxGeometry height="80" width="180" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="tv83wv8QEXWZSXAw0ytr-120" parent="tv83wv8QEXWZSXAw0ytr-119" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="80" width="30" as="geometry">
+            <mxRectangle height="80" width="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tv83wv8QEXWZSXAw0ytr-121" parent="tv83wv8QEXWZSXAw0ytr-119" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" value="getNodeName()&lt;br&gt;getTextContent()&lt;br&gt;getChildNodes()" vertex="1">
+          <mxGeometry height="80" width="150" x="30" as="geometry">
+            <mxRectangle height="80" width="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DomReadEFEW32_uses_Node" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1.013;exitY=0.777;exitDx=0;exitDy=0;dashed=1;exitPerimeter=0;">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1607" y="787" />
-              <mxPoint x="1607" y="447" />
-              <mxPoint x="1882" y="447" />
+              <mxPoint x="1607" y="111" />
             </Array>
+            <mxPoint x="1257" y="111" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
