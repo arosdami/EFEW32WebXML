@@ -51,7 +51,7 @@
                 
                 <TagsagiTipus TipusID="TT001">
                     <Megnevezes>Prémium tagság</Megnevezes>
-                    <Leiras>Teljes körű hozzáférés minden szolgáltatáshoz</Leírás>
+                    <Leiras>Teljes körű hozzáférés minden szolgáltatáshoz</Leiras>
                     <Ar>50000</Ar>
                     <Idotartam>12</Idotartam>
                     <Előnyök>
@@ -74,7 +74,7 @@
                                 <Megnevezes>Webfejlesztési Konferencia</Megnevezes>
                                 <Datum>2024-03-15</Datum>
                                 <Helyszín>Budapest, Kongresszusi Központ</Helyszín>
-                                <Leiras>Legújabb webfejlesztési technológiák és trendek</Leírás>
+                                <Leiras>Legújabb webfejlesztési technológiák és trendek</Leiras>
                                 <MaxResztvevő>200</MaxResztvevő>
                                 <Dij>15000</Dij>
                                 
@@ -89,7 +89,7 @@
                                 <Megnevezes>Adatbázis Tervező Workshop</Megnevezes>
                                 <Datum>2024-06-20</Datum>
                                 <Helyszín>Debrecen, Egyetemi Campus</Helyszín>
-                                <Leiras>Haladó adatbázis tervezési technikák</Leírás>
+                                <Leiras>Haladó adatbázis tervezési technikák</Leiras>
                                 <MaxResztvevő>50</MaxResztvevő>
                                 <Dij>20000</Dij>
                                 
@@ -151,7 +151,7 @@
                 
                 <TagsagiTipus TipusID="TT002">
                     <Megnevezes>Standard tagság</Megnevezes>
-                    <Leiras>Alap hozzáférés a szolgáltatásokhoz</Leírás>
+                    <Leiras>Alap hozzáférés a szolgáltatásokhoz</Leiras>
                     <Ar>25000</Ar>
                     <Idotartam>6</Idotartam>
                     <Előnyök>
@@ -173,7 +173,7 @@
                                 <Megnevezes>Python Workshop</Megnevezes>
                                 <Datum>2024-04-10</Datum>
                                 <Helyszín>Szeged, Informatikai Kar</Helyszín>
-                                <Leiras>Python alapok és haladó technikák</Leírás>
+                                <Leiras>Python alapok és haladó technikák</Leiras>
                                 <MaxResztvevő>30</MaxResztvevő>
                                 <Dij>12000</Dij>
                                 
@@ -238,7 +238,7 @@
                 
                 <TagsagiTipus TipusID="TT001">
                     <Megnevezes>Prémium tagság</Megnevezes>
-                    <Leiras>Teljes körű hozzáférés minden szolgáltatáshoz</Leírás>
+                    <Leiras>Teljes körű hozzáférés minden szolgáltatáshoz</Leiras>
                     <Ar>50000</Ar>
                     <Idotartam>12</Idotartam>
                     <Előnyök>
@@ -261,7 +261,7 @@
                                 <Megnevezes>React Konferencia</Megnevezes>
                                 <Datum>2024-09-15</Datum>
                                 <Helyszín>Pécs, Tudományegyetem</Helyszín>
-                                <Leírás>React és modern frontend technológiák</Leírás>
+                                <Leiras>React és modern frontend technológiák</Leiras>
                                 <MaxResztvevő>150</MaxResztvevő>
                                 <Dij>18000</Dij>
                                 
@@ -276,7 +276,7 @@
                                 <Megnevezes>UI/UX Design Workshop</Megnevezes>
                                 <Datum>2024-11-20</Datum>
                                 <Helyszín>Győr, Műszaki Egyetem</Helyszín>
-                                <Leírás>Modern felhasználói felület tervezés</Leírás>
+                                <Leiras>Modern felhasználói felület tervezés</Leiras>
                                 <MaxResztvevő>40</MaxResztvevő>
                                 <Dij>22000</Dij>
                                 

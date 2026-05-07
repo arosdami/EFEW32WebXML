@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
-  <diagram name="UML Osztálydiagram" id="UML_EFEW32">
-    <mxGraphModel dx="1811" dy="1231" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <diagram name="UML Class Diagram" id="UML_EFEW32">
+    <mxGraphModel dx="706" dy="616" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -8,7 +8,7 @@
           <mxGeometry height="330.38" width="207.71" x="1330" y="385" as="geometry" />
         </mxCell>
         <mxCell id="3" parent="2" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" value="&lt;h3 style=&quot;text-wrap-mode: wrap; font-weight: 500; line-height: 1.5; margin: 18.288px 0px 13.716px; color: rgb(64, 64, 64); font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, &amp;quot;Noto Sans&amp;quot;, Ubuntu, Cantarell, &amp;quot;Helvetica Neue&amp;quot;, Oxygen, &amp;quot;Open Sans&amp;quot;, sans-serif; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;&lt;font style=&quot;font-size: 15px; font-weight: normal;&quot;&gt;DomReadEFEW32&lt;/font&gt;&lt;/h3&gt;" vertex="1">
-          <mxGeometry height="429.7451515151513" width="180" y="-10.83090909090909" as="geometry" />
+          <mxGeometry height="430" width="180" y="-10.83090909090909" as="geometry" />
         </mxCell>
         <mxCell id="4" parent="3" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" value="" vertex="1">
           <mxGeometry height="64" width="180" y="30" as="geometry" />
@@ -18,7 +18,7 @@
             <mxRectangle height="64" width="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="6" parent="4" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;whiteSpace=wrap;html=1;" value="&lt;p dir=&quot;ltr&quot; class=&quot;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p dir=&quot;ltr&quot; class=&quot;&quot;&gt;&lt;/p&gt;&lt;p dir=&quot;ltr&quot; class=&quot;&quot;&gt;&lt;/p&gt;" vertex="1">
+        <mxCell id="6" parent="4" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=0;overflow=hidden;whiteSpace=wrap;html=1;" value="- document: Document&lt;br&gt;- inputFilePath: String&lt;br&gt;- outputFilePath: String" vertex="1">
           <mxGeometry height="64" width="150" x="30" as="geometry">
             <mxRectangle height="64" width="150" as="alternateBounds" />
           </mxGeometry>
@@ -31,7 +31,7 @@
             <mxRectangle height="261" width="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="12" parent="10" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;box-sizing: border-box; border-width: 0px; border-style: solid; border-color: rgb(192, 193, 198); animation: 250ms ease-in-out 0s 1 normal none running ft-fadeIn; color: rgb(204, 204, 204); font-family: Menlo, Monaco, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; font-size: 11.008px;&quot;&gt;&lt;p dir=&quot;ltr&quot; class=&quot;&quot;&gt;&lt;/p&gt;&lt;p dir=&quot;ltr&quot; class=&quot;&quot;&gt;&lt;/p&gt;&lt;/span&gt;" vertex="1">
+        <mxCell id="12" parent="10" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" value="&amp;nbsp;DomReadEFEW32(String inputFilePath, String outputFilePath)&lt;br&gt;void loadXmlDocument() throws Exception&lt;br&gt;void printDocumentToConsole()&lt;br&gt;void saveXmlDocument() throws Exception&lt;br&gt;static void main(String[] args)" vertex="1">
           <mxGeometry height="261" width="150" x="30" as="geometry">
             <mxRectangle height="261" width="150" as="alternateBounds" />
           </mxGeometry>
@@ -44,16 +44,10 @@
             <mxRectangle height="75" width="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9" parent="7" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;void printNode(Node node, String indent)&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;String getElementText(Element parent, String tagName)&lt;/span&gt;" vertex="1">
+        <mxCell id="9" parent="7" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;void printNode(Node node, String indent)&lt;/span&gt;" vertex="1">
           <mxGeometry height="75" width="150" x="30" as="geometry">
             <mxRectangle height="75" width="150" as="alternateBounds" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="123" parent="2" style="text;whiteSpace=wrap;html=1;" value="&lt;p style=&quot;border-color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot; dir=&quot;ltr&quot; class=&quot;&quot;&gt;&lt;span style=&quot;border-color: rgb(0, 0, 0); background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;DomReadEFEW32(String inputFilePath, String outputFilePath)&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;void loadXmlDocument() throws Exception&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;void saveXmlDocument() throws Exception&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;void startQuerySystem()&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;void printDocumentToConsole()&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;void printStatistics()&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;static void main(String[] args)&lt;br&gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;" vertex="1">
-          <mxGeometry height="240.38" width="145" x="35" y="90" as="geometry" />
-        </mxCell>
-        <mxCell id="WbuEZvqcQ6cjDewq9W0E-125" parent="2" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;Document document&lt;br&gt;String inputFilePath&lt;br&gt;String outputFilePath&lt;/span&gt;" vertex="1">
-          <mxGeometry height="32.778443113772454" width="132.5" x="37.6" y="12.85429141716567" as="geometry" />
         </mxCell>
         <mxCell id="13" connectable="0" parent="1" style="group" value="" vertex="1">
           <mxGeometry height="216" width="181" x="1716" y="535" as="geometry" />
@@ -378,9 +372,12 @@
             <mxRectangle height="60" width="150" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="101" edge="1" parent="1" source="123" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;exitX=1.003;exitY=0.891;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.006;entryY=0.635;entryDx=0;entryDy=0;entryPerimeter=0;" target="18">
+        <mxCell id="101" edge="1" parent="1" source="10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;entryX=0.006;entryY=0.635;entryDx=0;entryDy=0;entryPerimeter=0;" target="18">
           <mxGeometry relative="1" as="geometry">
-            <Array as="points" />
+            <Array as="points">
+              <mxPoint x="1510" y="689" />
+              <mxPoint x="1510" y="689" />
+            </Array>
             <mxPoint x="1520" y="689" as="sourcePoint" />
             <mxPoint x="1715" y="689" as="targetPoint" />
           </mxGeometry>
@@ -581,8 +578,49 @@
             <mxRectangle height="80" width="150" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WbuEZvqcQ6cjDewq9W0E-127" edge="1" parent="1" source="123" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=-0.001;entryY=0.3;entryDx=0;entryDy=0;entryPerimeter=0;" target="34">
+        <mxCell id="WbuEZvqcQ6cjDewq9W0E-127" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=-0.001;entryY=0.3;entryDx=0;entryDy=0;entryPerimeter=0;" target="34">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Node_Class" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="140" width="181" x="1702" y="378" as="geometry" />
+        </mxCell>
+        <mxCell id="Node_ClassTable" parent="Node_Class" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" value="&lt;h3 style=&quot;text-wrap-mode: wrap; font-weight: 500; line-height: 1.5; margin: 18.288px 0px 13.716px; color: rgb(64, 64, 64); font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, &amp;quot;Noto Sans&amp;quot;, Ubuntu, Cantarell, &amp;quot;Helvetica Neue&amp;quot;, Oxygen, &amp;quot;Open Sans&amp;quot;, sans-serif; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;&lt;font style=&quot;font-size: 15px; font-weight: normal;&quot;&gt;Node&lt;/font&gt;&lt;/h3&gt;" vertex="1">
+          <mxGeometry height="140" width="180" as="geometry" />
+        </mxCell>
+        <mxCell id="Node_Attr" parent="Node_ClassTable" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" value="" vertex="1">
+          <mxGeometry height="30" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Node_AttrSign" parent="Node_Attr" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;overflow=hidden;whiteSpace=wrap;html=1;" value="+" vertex="1">
+          <mxGeometry height="30" width="30" as="geometry">
+            <mxRectangle height="30" width="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Node_AttrVal" parent="Node_Attr" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" value="getNodeType()" vertex="1">
+          <mxGeometry height="30" width="150" x="30" as="geometry">
+            <mxRectangle height="30" width="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Node_Methods" parent="Node_ClassTable" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" value="" vertex="1">
+          <mxGeometry height="80" width="180" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Node_MethodsSign" parent="Node_Methods" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="80" width="30" as="geometry">
+            <mxRectangle height="80" width="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Node_MethodsVal" parent="Node_Methods" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" value="getNodeName()&lt;br&gt;getTextContent()&lt;br&gt;getChildNodes()" vertex="1">
+          <mxGeometry height="80" width="150" x="30" as="geometry">
+            <mxRectangle height="80" width="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DomReadEFEW32_uses_Node" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1.013;exitY=0.777;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;exitPerimeter=0;" target="Node_Methods">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1607" y="787" />
+              <mxPoint x="1607" y="447" />
+              <mxPoint x="1882" y="447" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
