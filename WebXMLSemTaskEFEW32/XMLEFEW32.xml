@@ -14,7 +14,7 @@
         <Felhasznalo FelhasznaloID="F002">
             <Felhasznalonev>kiss_janos_efew32</Felhasznalonev>
             <Jelszo>hashed_password_002</Jelszo>
-            <Szerepkor>Szervező</Szerepkor>
+            <Szerepkor>Szervezo</Szerepkor>
             <Letrehozva>2024-02-20</Letrehozva>
             <UtoljaraBejelentkezve>2025-04-08T14:22:00</UtoljaraBejelentkezve>
         </Felhasznalo>
@@ -22,7 +22,7 @@
         <Felhasznalo FelhasznaloID="F003">
             <Felhasznalonev>toth_maria_efew32</Felhasznalonev>
             <Jelszo>hashed_password_003</Jelszo>
-            <Szerepkor>Vendég</Szerepkor>
+            <Szerepkor>Vendeg</Szerepkor>
             <Letrehozva>2024-03-10</Letrehozva>
             <UtoljaraBejelentkezve>2025-04-07T09:15:00</UtoljaraBejelentkezve>
         </Felhasznalo>
@@ -59,13 +59,13 @@
     
     <TagsagiTipusok>
         <TagsagiTipus TipusID="TT001">
-            <Megnevezes>Prémium tagság</Megnevezes>
+            <Megnevezes>Premium tagsag</Megnevezes>
             <Idotartam>12</Idotartam>
             <Ar>50000</Ar>
         </TagsagiTipus>
         
         <TagsagiTipus TipusID="TT002">
-            <Megnevezes>Standard tagság</Megnevezes>
+            <Megnevezes>Standard tagsag</Megnevezes>
             <Idotartam>6</Idotartam>
             <Ar>25000</Ar>
         </TagsagiTipus>
@@ -79,13 +79,13 @@
         </Telefonszam>
         
         <Telefonszam TelefonszamID="TSZ002">
-            <Telefonszam>+3612345678</Telefonszam>
+            <Telefonszam>+36123456789</Telefonszam>
             <Tipus>Otthoni</Tipus>
             <TagID>T001</TagID>
         </Telefonszam>
         
         <Telefonszam TelefonszamID="TSZ003">
-            <Telefonszam>+3618765432</Telefonszam>
+            <Telefonszam>+36187654321</Telefonszam>
             <Tipus>Munkahelyi</Tipus>
             <TagID>T001</TagID>
         </Telefonszam>
@@ -97,7 +97,7 @@
         </Telefonszam>
         
         <Telefonszam TelefonszamID="TSZ005">
-            <Telefonszam>+3652123456</Telefonszam>
+            <Telefonszam>+36521234567</Telefonszam>
             <Tipus>Otthoni</Tipus>
             <TagID>T002</TagID>
         </Telefonszam>
@@ -109,7 +109,7 @@
         </Telefonszam>
         
         <Telefonszam TelefonszamID="TSZ007">
-            <Telefonszam>+3662123456</Telefonszam>
+            <Telefonszam>+36621234567</Telefonszam>
             <Tipus>Munkahelyi</Tipus>
             <TagID>T003</TagID>
         </Telefonszam>
@@ -128,7 +128,7 @@
             <Datum>2024-02-20</Datum>
             <Netto>22500</Netto>
             <Brutto>25000</Brutto>
-            <Modszert>Banki átutalás</Modszert>
+            <Modszert>Banki atutalás</Modszert>
             <TagID>T002</TagID>
         </Megujitas>
         
@@ -188,14 +188,14 @@
             <TagID>T001</TagID>
             <EsemenyID>E001</EsemenyID>
             <ReszveteliDij>0</ReszveteliDij>
-            <Megjegyzes>Prémium tagként ingyenes</Megjegyzes>
+            <Megjegyzes>Premium tagkent ingyenes</Megjegyzes>
         </TagEsemeny>
         
         <TagEsemeny ID="TE002">
             <TagID>T001</TagID>
             <EsemenyID>E002</EsemenyID>
             <ReszveteliDij>0</ReszveteliDij>
-            <Megjegyzes>Prémium tagként ingyenes</Megjegyzes>
+            <Megjegyzes>Premium tagkent ingyenes</Megjegyzes>
         </TagEsemeny>
         
         <TagEsemeny ID="TE003">

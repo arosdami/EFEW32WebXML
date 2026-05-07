@@ -25,7 +25,7 @@
                   
       <Jelszo>hashed_password_002</Jelszo>
                   
-      <Szerepkor>Szervező</Szerepkor>
+      <Szerepkor>Szervezo</Szerepkor>
                   
       <Letrehozva>2024-02-20</Letrehozva>
                   
@@ -40,7 +40,7 @@
                   
       <Jelszo>hashed_password_003</Jelszo>
                   
-      <Szerepkor>Vendég</Szerepkor>
+      <Szerepkor>Vendeg</Szerepkor>
                   
       <Letrehozva>2024-03-10</Letrehozva>
                   
@@ -110,7 +110,7 @@
             
     <TagsagiTipus TipusID="TT001">
                   
-      <Megnevezes>Prémium tagság</Megnevezes>
+      <Megnevezes>Premium tagsag</Megnevezes>
                   
       <Idotartam>12</Idotartam>
                   
@@ -121,7 +121,7 @@
         
     <TagsagiTipus TipusID="TT002">
                   
-      <Megnevezes>Standard tagság</Megnevezes>
+      <Megnevezes>Standard tagsag</Megnevezes>
                   
       <Idotartam>6</Idotartam>
                   
@@ -147,7 +147,7 @@
         
     <Telefonszam TelefonszamID="TSZ002">
                   
-      <Telefonszam>+3612345678</Telefonszam>
+      <Telefonszam>+36123456789</Telefonszam>
                   
       <Tipus>Otthoni</Tipus>
                   
@@ -158,7 +158,7 @@
         
     <Telefonszam TelefonszamID="TSZ003">
                   
-      <Telefonszam>+3618765432</Telefonszam>
+      <Telefonszam>+36187654321</Telefonszam>
                   
       <Tipus>Munkahelyi</Tipus>
                   
@@ -180,7 +180,7 @@
         
     <Telefonszam TelefonszamID="TSZ005">
                   
-      <Telefonszam>+3652123456</Telefonszam>
+      <Telefonszam>+36521234567</Telefonszam>
                   
       <Tipus>Otthoni</Tipus>
                   
@@ -202,7 +202,7 @@
         
     <Telefonszam TelefonszamID="TSZ007">
                   
-      <Telefonszam>+3662123456</Telefonszam>
+      <Telefonszam>+36621234567</Telefonszam>
                   
       <Tipus>Munkahelyi</Tipus>
                   
@@ -238,7 +238,7 @@
                   
       <Brutto>25000</Brutto>
                   
-      <Modszert>Banki átutalás</Modszert>
+      <Modszert>Banki atutalás</Modszert>
                   
       <TagID>T002</TagID>
               
@@ -351,7 +351,7 @@
                   
       <ReszveteliDij>0</ReszveteliDij>
                   
-      <Megjegyzes>Prémium tagként ingyenes</Megjegyzes>
+      <Megjegyzes>Premium tagkent ingyenes</Megjegyzes>
               
     </TagEsemeny>
             
@@ -364,7 +364,7 @@
                   
       <ReszveteliDij>0</ReszveteliDij>
                   
-      <Megjegyzes>Prémium tagként ingyenes</Megjegyzes>
+      <Megjegyzes>Premium tagkent ingyenes</Megjegyzes>
               
     </TagEsemeny>
             

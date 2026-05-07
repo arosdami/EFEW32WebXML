@@ -49,8 +49,8 @@
     <xs:simpleType name="SzerepkorType">
         <xs:restriction base="xs:string">
             <xs:enumeration value="Admin"/>
-            <xs:enumeration value="Szervező"/>
-            <xs:enumeration value="Vendég"/>
+            <xs:enumeration value="Szervezo"/>
+            <xs:enumeration value="Vendeg"/>
         </xs:restriction>
     </xs:simpleType>
 
@@ -82,7 +82,7 @@
         </xs:restriction>
     </xs:simpleType>
 
-    <xs:simpleType name="TelefonszamType">
+    <xs:simpleType name="TelefonszamValueType">
         <xs:restriction base="xs:string">
             <xs:pattern value="\+36[0-9]{9}"/>
         </xs:restriction>
@@ -91,7 +91,7 @@
     <xs:simpleType name="FizetesiModType">
         <xs:restriction base="xs:string">
             <xs:enumeration value="Bankkártya"/>
-            <xs:enumeration value="Banki átutalás"/>
+            <xs:enumeration value="Banki atutalás"/>
             <xs:enumeration value="PayPal"/>
             <xs:enumeration value="Készpénz"/>
         </xs:restriction>
@@ -138,7 +138,7 @@
 
     <xs:complexType name="TelefonszamType">
         <xs:sequence>
-            <xs:element name="Telefonszam" type="TelefonszamType"/>
+            <xs:element name="Telefonszam" type="TelefonszamValueType"/>
             <xs:element name="Tipus" type="TelefonTipusType"/>
             <xs:element name="TagID" type="TagIDType"/>
         </xs:sequence>

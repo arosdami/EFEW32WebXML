@@ -33,10 +33,10 @@ public class DomReadEFEW32 {
             document = builder.parse(new File(inputFilePath));
             
             System.out.println("XML dokumentum sikeresen beolvasva: " + inputFilePath);
-            System.out.println("Gyökér elem: " + document.getDocumentElement().getNodeName());
+            System.out.println("Gyoker elem: " + document.getDocumentElement().getNodeName());
             
         } catch (Exception e) {
-            System.err.println("Hiba az XML beolvasása során: " + e.getMessage());
+            System.err.println("Hiba az XML beolvasasa soran: " + e.getMessage());
             throw e;
         }
     }
@@ -97,7 +97,7 @@ public class DomReadEFEW32 {
             System.out.println("XML dokumentum sikeresen mentve: " + outputFilePath);
             
         } catch (Exception e) {
-            System.err.println("Hiba mentésnél: " + e.getMessage());
+            System.err.println("Hiba mentesnel: " + e.getMessage());
             throw e;
         }
     }
